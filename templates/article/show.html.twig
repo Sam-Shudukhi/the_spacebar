@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{# add the title to title block in base.html.twig #}
+{% block title %} Article: {{ title }} {% endblock %}
+
+{# add our data in the body block of the base.html.twig #}
+{% block body %}
+<h1>{{ title }}</h1>
+
+<div>
+    <p>ipsum lorum kees what is up symfony 4</p>
+
+    <p>Symfony 4 u rock this is very awesome</p>
+
+    <p>Me likey. Symfone, I am loving it</p>
+</div>
+
+<h2>Comments ({{ comments|length }}</h2>
+
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
